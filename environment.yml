@@ -1,0 +1,11 @@
+name: data-viz
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - matplotlib
+  - seaborn
+  - pandas
+  - numpy
+  - pip

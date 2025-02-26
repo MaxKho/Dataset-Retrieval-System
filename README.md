@@ -1,2 +1,21 @@
 # information-retrieval
 Information Retrieval Assignment 1
+
+Metadata/Filter Options for OpenML datasets:
+
+id
+name
+version
+uploader
+status
+format
+MajorityClassSize
+MaxNominalAttDistinctValues
+MinorityClassSize
+NumberOfClasses
+NumberOfFeatures
+NumberOfInstances
+NumberOfInstancesWithMissingValues
+NumberOfMissingValues
+NumberOfNumericFeatures
+NumberOfSymbolicFeatures
