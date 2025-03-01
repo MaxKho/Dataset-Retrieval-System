@@ -19,3 +19,5 @@ NumberOfInstancesWithMissingValues
 NumberOfMissingValues
 NumberOfNumericFeatures
 NumberOfSymbolicFeatures
+
+Abstracts are in data_descriptions.json
