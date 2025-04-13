@@ -1,0 +1,79 @@
+final_test.json Queries
+
+Query:
+- Urban Tree Inventory Attributes (diametre, circonference-en-cm, 
+Correct Document:
+- "id": "43023"
+
+Query:
+- Oz Binary Classification Dataset 
+Correct Document:
+- "id": "824"
+
+Query:
+- Molecule chmbel id classification of QSAR data (Molecular Fingerprints)
+Correct Document:
+- "id": "3555"
+
+Query:
+- Kassa website urls classification data
+Correct Document:
+- "id": "42795"
+
+5)
+Query:
+- IRIS flower lengths and species
+Correct Document:
+- "id": "43839"
+
+Query:
+- Bidding information and statistics of FOREX usddkk High hour
+Correct Document:
+- "id": "41816"
+
+Query:
+- FCFP6 1024 sized Molecule chembel ids from QSAR TID data
+Correct Document:
+- "id": "3553"
+
+Query:
+- Montesinho natural park fires coordinates and conditions
+Correct Document:
+- "id": "43440",
+
+Query:
+- Philippine seed versions classification dataset
+Correct Document:
+- "id": "44563"
+
+10)
+Query:
+- GINA prior pixel labels handwritten digit recognition
+Correct Document:
+- "id": "1041"
+
+Query:
+- Meta-Album OmniPrint-MD-6 Dataset with background and foreground attributes
+Correct Document:
+- "id": "44310"
+
+Query:
+- Austin Weather Temperatures, Humidity, and Wind MPH
+Correct Document:
+- "id": "43331"
+
+Query:
+- [DE]: led24-pmlb [PY] attributes and irrelevant attributes
+Correct Document:
+- "id": "40677"
+
+Query:
+- Crime Report Information in Seattle
+Correct Document:
+- "id": "41960"
+
+15)
+Query:
+- Features of DE default of credit card clients, Finantial dataset features for automl benchmark
+Correct Document:
+- "id": "46373"
