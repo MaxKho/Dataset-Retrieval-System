@@ -112,5 +112,5 @@ for qid, q_emb in tqdm(query_embeddings.items(), desc="Ranking documents", unit=
     ranking[qid] = ranked_doc_ids
 
 # Save rankings
-with open("../data/data/2_intermediate_data/rankings_valid_concat.json", "w", encoding="utf-8") as f:
+with open("../data/data/2_intermediate_data/joint_rep_rankings_val.json", "w", encoding="utf-8") as f:
     json.dump(ranking, f, indent=4)

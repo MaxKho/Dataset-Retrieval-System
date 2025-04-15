@@ -101,4 +101,4 @@ for epoch in range(num_epochs):
     print(f"Epoch {epoch + 1} finished with average loss: {avg_loss:.4f}")
 
 # Optionally, save the fine-tuned adapter.
-model.save_adapter("./finetuned_adhoc_query_adapter", "adhoc_query")
+model.save_adapter("../data/weights/finetuned_adhoc_query_adapter", "adhoc_query")

@@ -139,7 +139,7 @@ with torch.no_grad():
         ranking[qid] = ranked_doc_ids
 
 # Export the ranking dictionary to a JSON file.
-with open("../data/data/2_intermediate_data/rankings_valid_individual.json", "w", encoding="utf-8") as f:
+with open("../data/data/2_intermediate_data/partial_rep_rankings_val.json", "w", encoding="utf-8") as f:
     json.dump(ranking, f, indent=4)
 
 print("Ranking complete. Rankings have been saved to 'rankings.json'.")

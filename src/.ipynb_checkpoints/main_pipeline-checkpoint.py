@@ -31,10 +31,10 @@ if __name__ == "__main__":
     run_script("training_set_generation_module/split_data.py", "5) Data split successful.")
 
     # 6. Fine-tuning
-    run_script("fine_tuning_module/fine_tune_specter2.py", "6) Fine-tuning successful.")
+    run_script("fine_tuning_module/fine_tune_spectar2_partial.py", "6) Fine-tuning successful.")
 
     # 7. Scoring
-    run_script("scoring_function_module/scoring_function_3_parts.py", "7) Scoring complete.")
+    run_script("scoring_function_module/scoring_function_partial.py", "7) Scoring complete.")
 
     # 8. Evaluation
     run_script("evaluation_module/evaluation.py", "8) Evaluation successful.")
