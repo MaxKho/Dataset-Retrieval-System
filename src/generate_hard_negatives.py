@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/16dOcEvYc1TWinRIy2kejBGr9U9spC0ra
 """
 
-pip install rank_bm25
-
 import json
 import argparse
 import random
