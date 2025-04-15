@@ -83,8 +83,9 @@ for entry in tqdm(pairs):
 
     if top_doc != qid:
         self_score = dict(scored).get(qid, -1)
-        negatives = [doc for doc, score in scored_sorted if doc != qid and score > self_score][:10]
+        negatives = [doc for doc, score in scored_sorted if doc != qid and score >= self_score][:10]
     else:
+        # Add fallback in case BM25 retrieves the document correctly
         negatives = random.sample([doc for doc in id_order if doc != qid], min(5, len(id_order) - 1))
 
     entry["hard_negatives"] = negatives
