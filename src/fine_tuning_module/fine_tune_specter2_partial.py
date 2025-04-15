@@ -8,7 +8,7 @@ from adapters import AutoAdapterModel
 # Define a PyTorch Dataset wrapper for our training data stored in a JSON file.
 # Note: we use __init__, __len__, __getitem__ so that our dataset works correctly.
 class TrainingDataset(Dataset):
-    def __init__(self, json_path="../data/final_train.json", doc_field="title"):
+    def __init__(self, json_path="../data/data/3_final_data/final_train.json", doc_field="title"):
         # Load the JSON file containing the training data.
         with open(json_path, "r", encoding="utf-8") as f:
             self.data = json.load(f)
@@ -54,13 +54,13 @@ for field in doc_fields:
     model.to(device)
 
     # Create the dataset and dataloader using our JSON file and the selected document field.
-    train_dataset = TrainingDataset(json_path="../data/final_train.json", doc_field=field)
+    train_dataset = TrainingDataset(json_path="../data/data/3_final_data/final_train.json", doc_field=field)
     train_loader = DataLoader(train_dataset, batch_size=8, shuffle=True, collate_fn=collate_fn)
 
     # Set up the optimizer and loss.
     optimizer = optim.Adam(model.parameters(), lr=2e-5)
     loss_fn = nn.CrossEntropyLoss()
-    num_epochs = 3
+    num_epochs = 20
     model.train()
 
     for epoch in range(num_epochs):
