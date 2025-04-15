@@ -3,6 +3,7 @@ import torch
 from transformers import AutoTokenizer
 from adapters import AutoAdapterModel
 from tqdm import tqdm
+import os
 
 # Set up device.
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -12,18 +13,15 @@ tokenizer = AutoTokenizer.from_pretrained("allenai/specter2_base")
 model = AutoAdapterModel.from_pretrained("allenai/specter2_base")
 model.to(device)
 
-# Load the three fine-tuned adapters.
-# Assumes the folders "finetuned_adhoc_query_adapter_title",
-# "finetuned_adhoc_query_adapter_details", and
-# "finetuned_adhoc_query_adapter_feature_summary" are in the current directory.
 model.load_adapter("../data/weights/finetuned_adhoc_query_adapter_title", load_as="title")
 model.load_adapter("../data/weights/finetuned_adhoc_query_adapter_details", load_as="details")
-model.load_adapter("../data/weights/finetuned_adhoc_query_adapter_summary", load_as="feature_summary")
+model.load_adapter("../data/weights/finetuned_adhoc_query_adapter_feature_summary", load_as="feature_summary")
+
 model.to(device)
 model.eval()
 
 # Load the training data.
-with open("final_valid.json", "r", encoding="utf-8") as f:
+with open("../data/data/3_final_data/final_valid.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 # Prebuild a mapping from id to data record to avoid repeated linear searches.
@@ -141,7 +139,7 @@ with torch.no_grad():
         ranking[qid] = ranked_doc_ids
 
 # Export the ranking dictionary to a JSON file.
-with open("../data/data/2_intermediate_data/rankings_valid_concat.json", "w", encoding="utf-8") as f:
+with open("../data/data/2_intermediate_data/rankings_valid_individual.json", "w", encoding="utf-8") as f:
     json.dump(ranking, f, indent=4)
 
 print("Ranking complete. Rankings have been saved to 'rankings.json'.")
