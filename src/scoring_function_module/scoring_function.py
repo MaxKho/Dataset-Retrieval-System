@@ -16,7 +16,7 @@ model.to(device)
 
 # Load the fine-tuned query adapter from a local directory.
 # This assumes you have saved your fine-tuned query adapter at the given path.
-model.load_adapter("../data/finetuned_adhoc_query_adapter", load_as="adhoc_query")
+model.load_adapter("../data/weights/finetuned_adhoc_query_adapter", load_as="adhoc_query")
 
 # Load the proximity adapter for encoding documents from Hugging Face.
 model.load_adapter("allenai/specter2", source="hf", load_as="proximity")
