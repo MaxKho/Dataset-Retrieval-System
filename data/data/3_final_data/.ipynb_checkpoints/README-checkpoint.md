@@ -1,0 +1,1 @@
+This folder is needed for the final data and the embeddings needed to perform inference (src/demo_retrieval.py)

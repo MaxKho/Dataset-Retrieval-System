@@ -1,0 +1,1 @@
+This folder is needed for all 3 different model weights of the partial model and for the joint model weights.

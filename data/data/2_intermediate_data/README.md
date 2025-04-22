@@ -1,0 +1,1 @@
+This folder is needed to store all the required intermediate data files.
