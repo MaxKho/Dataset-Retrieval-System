@@ -1,4 +1,4 @@
-# Information Retrieval Assignment 2
+# Dataset Search Engine
 
 End‑to‑end pipeline for building a **query–document training set**, fine‑tuning a SPECTER‑2 encoder with Adapter Fusion, and ranking documents for ad‑hoc retrieval tasks.  
 Everything lives in **src/** – plug‑and‑play from raw data to evaluation reports.
